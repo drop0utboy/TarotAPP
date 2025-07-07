@@ -1,8 +1,8 @@
-/** FRONTEND\postcss.config.cjs */
+// postcss.config.js
+/** @type {import('postcss').Config} */
 module.exports = {
   plugins: {
-    // v4용 패키지
-    '@tailwindcss/postcss': {},
-    autoprefixer: {},
+    '@tailwindcss/postcss': {},    // Tailwind v4용 PostCSS 플러그인
+    autoprefixer: {},             // 자동 벤더 프리픽스
   },
 };
