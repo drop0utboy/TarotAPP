@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Sparkles, BookOpen } from "lucide-react";
 
-import TarotCard from "./TarotCard";
+import TarotCard from "@/Components/tarot/TarotCard.jsx";
 
 const tarotDeck = [
   // Major Arcana
@@ -251,13 +251,13 @@ The interpretation should be detailed but accessible, around 200-300 words.`;
           </Badge>
         </div>
 
-        <div className={`grid gap-6 justify-center ${
+        <div className={`grid gap-6 justify-center auto-rows-min ${
           spreadType === "single" ? "grid-cols-1" : 
           spreadType === "three_card" ? "grid-cols-1 md:grid-cols-3" :
           "grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
         }`}>
           {drawnCards.map((card, index) => (
-            <div key={index} className="flex flex-col items-center space-y-4">
+            <div key={index} className="flex-none flex flex-col items-center space-y-4">
               <TarotCard
                 card={card}
                 isRevealed={revealedCards.includes(index)}
