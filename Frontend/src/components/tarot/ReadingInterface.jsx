@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Sparkles, BookOpen } from "lucide-react";
 
-import TarotCard from "@/Components/tarot/TarotCard.jsx";
+import TarotCard from "@/components/tarot/TarotCard.jsx";
 
 const tarotDeck = [
   // Major Arcana
@@ -115,7 +115,7 @@ export default function ReadingInterface({ spreadType, onBack, onSaveReading }) 
   const generateInterpretation = async () => {
     setIsGeneratingInterpretation(true);
     try {
-      const { InvokeLLM } = await import("@/integrations/Core");
+      // const { InvokeLLM } = await import("@/integrations/Core");
       
       const cardDescriptions = drawnCards.map(card => 
         `${card.name} (${card.suit}) in position "${card.position}"${card.reversed ? ' (reversed)' : ''}: ${card.meaning}`

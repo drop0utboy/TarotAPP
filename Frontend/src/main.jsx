@@ -6,8 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 
 import Layout from "./Layout.jsx";
-import Reading from "./Pages/Reading.jsx";
-import History from "./Pages/History.jsx";
+import Reading from "./pages/Reading.jsx";
+import History from "./pages/History.jsx";
 
 console.log("✅ main.jsx 진입—Vite 번들 로드 완료");
 
